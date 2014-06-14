@@ -1,5 +1,5 @@
-#ifndef _MSM_VIDC_DEC_H_
-#define _MSM_VIDC_DEC_H_
+#ifndef _UAPI_MSM_VIDC_DEC_H_
+#define _UAPI_MSM_VIDC_DEC_H_
 
 #include <linux/types.h>
 #include <linux/ioctl.h>
@@ -58,6 +58,8 @@
 #define VDEC_MSG_EVT_HW_ERROR	(VDEC_MSG_BASE + 14)
 #define VDEC_MSG_EVT_INFO_CONFIG_CHANGED	(VDEC_MSG_BASE + 15)
 #define VDEC_MSG_EVT_INFO_FIELD_DROPPED	(VDEC_MSG_BASE + 16)
+#define VDEC_MSG_EVT_HW_OVERLOAD	(VDEC_MSG_BASE + 17)
+#define VDEC_MSG_EVT_MAX_CLIENTS	(VDEC_MSG_BASE + 18)
 
 /*Buffer flags bits masks.*/
 #define VDEC_BUFFERFLAG_EOS	0x00000001

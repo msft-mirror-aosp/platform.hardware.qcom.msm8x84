@@ -16,104 +16,109 @@
  ***
  ****************************************************************************
  ****************************************************************************/
-#ifndef _MSM_VIDC_H_
-#define _MSM_VIDC_H_
+#ifndef __MSM_VIDC_H__
+#define __MSM_VIDC_H__
+#include <linux/types.h>
 struct msm_vidc_extradata_header {
- unsigned int size;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int size;
  unsigned int:32;
  unsigned int:32;
  unsigned int type;
- unsigned int data_size;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int data_size;
  unsigned char data[1];
 };
 struct msm_vidc_interlace_payload {
- unsigned int format;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int format;
 };
 struct msm_vidc_framerate_payload {
  unsigned int frame_rate;
-};
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
 struct msm_vidc_ts_payload {
  unsigned int timestamp_lo;
  unsigned int timestamp_hi;
-};
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
 struct msm_vidc_concealmb_payload {
  unsigned int num_mbs;
 };
-struct msm_vidc_recoverysei_payload {
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+struct msm_vidc_recoverysei_payload {
  unsigned int flags;
 };
 struct msm_vidc_aspect_ratio_payload {
- unsigned int size;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int size;
  unsigned int version;
  unsigned int port_index;
  unsigned int aspect_width;
- unsigned int aspect_height;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int aspect_height;
 };
 struct msm_vidc_mpeg2_seqdisp_payload {
  unsigned int video_format;
- bool color_descp;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int color_descp;
  unsigned int color_primaries;
  unsigned int transfer_char;
  unsigned int matrix_coeffs;
- unsigned int disp_width;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int disp_width;
  unsigned int disp_height;
 };
 struct msm_vidc_input_crop_payload {
- unsigned int size;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int size;
  unsigned int version;
  unsigned int port_index;
  unsigned int left;
- unsigned int top;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int top;
  unsigned int width;
  unsigned int height;
 };
-struct msm_vidc_digital_zoom_payload {
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+struct msm_vidc_digital_zoom_payload {
  unsigned int size;
  unsigned int version;
  unsigned int port_index;
- unsigned int zoom_width;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int zoom_width;
  unsigned int zoom_height;
 };
 struct msm_vidc_extradata_index {
- unsigned int type;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int type;
  union {
  struct msm_vidc_input_crop_payload input_crop;
  struct msm_vidc_digital_zoom_payload digital_zoom;
- struct msm_vidc_aspect_ratio_payload aspect_ratio;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ struct msm_vidc_aspect_ratio_payload aspect_ratio;
  };
 };
 struct msm_vidc_panscan_window {
- unsigned int panscan_height_offset;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ unsigned int panscan_height_offset;
  unsigned int panscan_width_offset;
  unsigned int panscan_window_width;
  unsigned int panscan_window_height;
-};
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
 struct msm_vidc_panscan_window_payload {
  unsigned int num_panscan_windows;
  struct msm_vidc_panscan_window wnd[1];
-};
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
 struct msm_vidc_stream_userdata_payload {
  unsigned int type;
  unsigned int data[1];
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
+struct msm_vidc_frame_qp_payoad {
+ unsigned int frame_qp;
 };
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct msm_vidc_frame_qp_payload {

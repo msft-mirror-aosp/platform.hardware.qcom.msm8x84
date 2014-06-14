@@ -1,5 +1,5 @@
-#ifndef _MSM_VIDC_ENC_H_
-#define _MSM_VIDC_ENC_H_
+#ifndef _UAPI_MSM_VIDC_ENC_H_
+#define _UAPI_MSM_VIDC_ENC_H_
 
 #include <linux/types.h>
 #include <linux/ioctl.h>
@@ -45,6 +45,8 @@
 #define VEN_MSG_RESUME	9
 #define VEN_MSG_STOP_READING_MSG	10
 #define VEN_MSG_LTRUSE_FAILED	    11
+#define VEN_MSG_HW_OVERLOAD	12
+#define VEN_MSG_MAX_CLIENTS	13
 
 
 /*Buffer flags bits masks*/
@@ -695,4 +697,4 @@ struct venc_ltruse {
 	unsigned long   ltr_frames;
 };
 
-#endif /* _MSM_VIDC_ENC_H_ */
+#endif /* _UAPI_MSM_VIDC_ENC_H_ */
