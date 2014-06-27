@@ -1013,60 +1013,62 @@ struct mdp_display_commit {
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  uint32_t wait_for_finish;
  struct fb_var_screeninfo var;
- struct mdp_rect roi;
-};
+ struct mdp_rect l_roi;
+ struct mdp_rect r_roi;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
 struct mdp_overlay_list {
  uint32_t num_overlays;
  struct mdp_overlay **overlay_list;
- uint32_t flags;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ uint32_t flags;
  uint32_t processed_overlays;
 };
 struct mdp_page_protection {
- uint32_t page_protection;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ uint32_t page_protection;
 };
 struct mdp_mixer_info {
  int pndx;
- int pnum;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ int pnum;
  int ptype;
  int mixer_num;
  int z_order;
-};
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
 #define MAX_PIPE_PER_MIXER 4
 struct msmfb_mixer_info_req {
  int mixer_num;
- int cnt;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ int cnt;
  struct mdp_mixer_info info[MAX_PIPE_PER_MIXER];
 };
 struct msmfb_reg_access {
- uint8_t address;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ uint8_t address;
  uint8_t use_hs_mode;
  size_t buffer_size;
  void __user *buffer;
-};
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
 enum {
  DISPLAY_SUBSYSTEM_ID,
  ROTATOR_SUBSYSTEM_ID,
-};
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
 enum {
  MDP_IOMMU_DOMAIN_CP,
  MDP_IOMMU_DOMAIN_NS,
-};
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
 enum {
  MDP_WRITEBACK_MIRROR_OFF,
  MDP_WRITEBACK_MIRROR_ON,
- MDP_WRITEBACK_MIRROR_PAUSE,
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+ MDP_WRITEBACK_MIRROR_PAUSE,
  MDP_WRITEBACK_MIRROR_RESUME,
 };
 #endif
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 
